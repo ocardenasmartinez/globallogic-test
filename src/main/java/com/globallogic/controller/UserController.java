@@ -56,13 +56,4 @@ public class UserController {
         return matcher.matches();
     }
 
-    /*
-    *
-            return new ResponseEntity<>(error, HttpStatus.CREATED);
-
-            *
-            * var userResponse = new UserResponse();
-        userResponse.setId(UUID. randomUUID());
-    * */
-
 }
