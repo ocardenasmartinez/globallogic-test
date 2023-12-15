@@ -57,14 +57,7 @@ public class UserController {
     }
 
     /*
-    * var error = new UserCreateError();
-            var details = new ErrorDetails();
-            details.setDetail("error");
-            details.setCodigo(1);
-            details.setTimestamp(new Timestamp(1));
-            var errorList = new ArrayList<ErrorDetails>();
-            errorList.add(details);
-            error.setErrorDetailsList(errorList);
+    *
             return new ResponseEntity<>(error, HttpStatus.CREATED);
 
             *

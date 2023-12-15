@@ -23,8 +23,11 @@ public class UserService {
     }
 
     public UserResponse save(User user){
-        if(isUserCreated(user.getName())) throw new UserCreatedException();
-        return saveUser(user);
+        if(isUserCreated(user.getName())) {
+            throw new UserCreatedException();
+        }else{
+            return saveUser(user);
+        }
     }
 
     public UserLoginData getUserLoginData(String token) {
@@ -37,6 +40,7 @@ public class UserService {
         userLoginData.setId(userData.getId());
         userLoginData.setName(userData.getName());
         userLoginData.setEmail(userData.getEmail());
+        userLoginData.setPassword(userData.getPassword());
         var phones = new ArrayList<Phones>();
         userData.getPhones().forEach(phonesData -> {
             var phone = new Phones();
@@ -80,9 +84,6 @@ public class UserService {
 
     private boolean isUserCreated(String name) {
         var userDataName = userRepository.findByName(name);
-        if(userDataName == null)  return false;
-        else return true;
+        return userDataName != null;
     }
-
-
 }
