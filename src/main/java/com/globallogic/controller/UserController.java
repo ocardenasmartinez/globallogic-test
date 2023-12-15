@@ -1,6 +1,5 @@
 package com.globallogic.controller;
 
-
 import com.globallogic.entities.User;
 import com.globallogic.entities.UserLoginData;
 import com.globallogic.exceptions.EmailException;
@@ -8,7 +7,6 @@ import com.globallogic.exceptions.PasswordException;
 import com.globallogic.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.regex.Matcher;
