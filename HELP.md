@@ -1,26 +1,32 @@
 # GlobalLogic Test
 
-Projecto de prueba para GlobalLogic
+## Projecto de prueba para GlobalLogic
 
-Descarga del proyecto;
+### Descarga del proyecto;
 
     git clone https://github.com/ocardenasmartinez/globallogic-test.git
 
-compilación del proyecto
+### Compilación del proyecto
 
-en la raiz del proyecto 
+### En la raiz del proyecto 
 
+    Para linux o mac
     ./gradlew clean build
+    Para Windows
+    gradlew.bat clean build
 
-correr el proyecto
+### Correr el proyecto
 
+    Para linux o mac
     ./gradlew bootRun
+    Para Windows
+    gradlew.bat bootRun
 
-crear usuario
+### Crear usuario
 
     curl --header "Content-Type: application/json" --request POST --data '{"name": "Juan", "email": "correo@email.com", "password": "a2asfGfdfdf4", "phones": [{"number": "123456", "cityCode": "1", "countryCode": "CL"}]}' http://localhost:8080/signup
 
-respuesta de la creación de usuario
+### Respuesta de la creación de usuario
 
     {
         "id": "54080e11-ce12-4d61-abfd-45ee9ed99f20",
@@ -30,9 +36,9 @@ respuesta de la creación de usuario
         "active": true
     }
 
-con el atributo token se consulta el usuario
+### Con el atributo token se consulta el usuario
 
-consulta usuario
+### Consulta usuario
 
     curl -i http://localhost:8080/login -H "Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKdWFuIiwiZXhwIjoxNzAyNzE5NzUxLCJpYXQiOjE3MDI2ODM3NTF9.CfEaZcdY6QceRbTj9HSI4SmwJbXP_mgU7pYuZYVJ3ck"
 
