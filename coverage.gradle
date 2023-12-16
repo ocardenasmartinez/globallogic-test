@@ -1,10 +1,10 @@
 def jacocoExcludes = [
-           'com/globallogic/entities/**',
-           'com/globallogic/security/**',
-           'com/globallogic/repository/**',
-           'com/globallogic/exceptions/**',
-           'com/globallogic/entities/**',
-           'com/globallogic/GlobalLogicApplication.java'
+        'com/globallogic/entities/**',
+        'com/globallogic/security/**',
+        'com/globallogic/repository/**',
+        'com/globallogic/exceptions/**',
+        'com/globallogic/entities/**',
+        'com/globallogic/GlobalLogicApplication.java'
 ]
 
 jacocoTestReport {
