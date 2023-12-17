@@ -23,11 +23,9 @@ public class UserService {
     }
 
     public UserResponse save(User user){
-        if(isUserCreated(user.getName())) {
-            throw new UserCreatedException();
-        }else{
-            return saveUser(user);
-        }
+        if(isUserCreated(user.getName())) throw new UserCreatedException();
+        else return saveUser(user);
+
     }
 
     public UserLoginData getUserLoginData(String token) {
